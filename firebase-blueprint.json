@@ -1,0 +1,74 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "Ficha técnica de productos optimizada con características para la IA.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identificador único de producto"
+        },
+        "title": {
+          "type": "string",
+          "description": "Título del producto en Mercado Libre"
+        },
+        "category": {
+          "type": "string",
+          "description": "Categoría general del producto"
+        },
+        "price": {
+          "type": "number",
+          "description": "Precio unitario del producto"
+        },
+        "stock": {
+          "type": "number",
+          "description": "Unidades disponibles"
+        },
+        "description": {
+          "type": "string",
+          "description": "Descripción detallada redactada con ganchos comerciales"
+        }
+      },
+      "required": ["id", "title", "category", "price", "stock", "description"]
+    },
+    "Faq": {
+      "title": "FAQ",
+      "description": "Preguntas frecuentes de servicio al cliente sujetas a políticas de cumplimiento.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identificador de la FAQ"
+        },
+        "category": {
+          "type": "string",
+          "description": "Categoría general o Tag de mapeo"
+        },
+        "question": {
+          "type": "string",
+          "description": "Pregunta simulada o consulta del cliente"
+        },
+        "answer": {
+          "type": "string",
+          "description": "Respuesta corporativa limpia y segura"
+        },
+        "isActive": {
+          "type": "boolean",
+          "description": "Estado de inyección activa en la IA"
+        }
+      },
+      "required": ["id", "category", "question", "answer", "isActive"]
+    }
+  },
+  "firestore": {
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Colección de productos del catálogo"
+    },
+    "/faqs/{faqId}": {
+      "schema": "Faq",
+      "description": "Base de conocimiento de preguntas frecuentes"
+    }
+  }
+}

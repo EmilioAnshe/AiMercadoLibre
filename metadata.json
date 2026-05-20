@@ -1,0 +1,6 @@
+{
+  "name": "Respondedor y Optimizador para Mercado Libre con Compliance AI",
+  "description": "Herramienta integrada con IA para responder preguntas de compradores usando la ficha del producto y preguntas frecuentes (FAQ), optimizar descripciones y redactar respetando el 100% de las políticas y normativas de Mercado Libre.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
